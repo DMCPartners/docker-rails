@@ -116,12 +116,11 @@ ENV PATH $GEM_HOME/bin:$BUNDLE_PATH/gems/bin:$PATH
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
 # (BUNDLE_PATH = GEM_HOME, no need to mkdir/chown both)
 
-RUN apk --update add --virtual build-dependencies \
+RUN apk --update add \
     build-base \
     git \
     postgresql-client \
     graphicsmagick \
-    && apk del build-dependencies \
     && rm -rf /var/cache/apk/*
 
 RUN apk --update add --virtual build-dependencies \

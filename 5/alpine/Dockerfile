@@ -1,11 +1,10 @@
 FROM dmcpartners/ruby:2.5.3-alpine
 
-RUN apk --update add --virtual build-dependencies \
+RUN apk --update add \
     build-base \
     git \
     postgresql-client \
     graphicsmagick \
-    && apk del build-dependencies \
     && rm -rf /var/cache/apk/*
 
 # from https://github.com/nodejs/docker-node/blob/master/10/alpine/Dockerfile
