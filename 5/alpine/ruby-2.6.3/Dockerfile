@@ -4,6 +4,7 @@ RUN apk --update add \
   build-base \
   git \
   postgresql-client \
+  postgresql-dev \
   graphicsmagick \
   && rm -rf /var/cache/apk/*
 
