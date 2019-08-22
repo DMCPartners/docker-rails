@@ -6,6 +6,7 @@ RUN apk --update add \
   postgresql-client \
   postgresql-dev \
   graphicsmagick \
+  tzdata \
   && rm -rf /var/cache/apk/*
 
 # from https://github.com/nodejs/docker-node/blob/master/10/alpine/Dockerfile
